@@ -3,6 +3,8 @@ const subBtn = document.getElementById("sub");
 const asyncBtn = document.getElementById("async");
 const themeBtn = document.getElementById("theme");
 
+const store = createStore();
+
 addBtn.addEventListener('click', function () {
 
 });
