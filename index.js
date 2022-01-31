@@ -1,7 +1,7 @@
 import {createStore} from "./createStore.js";
 // import {createStore} from "redux";
 import {rootReducer} from "./redux/rootReducer.js";
-import {increment, decrement} from "./redux/actions.js";
+import {increment, decrement, async_inc} from "./redux/actions.js";
 
 const addBtn = document.getElementById("add");
 const subBtn = document.getElementById("sub");
@@ -19,7 +19,7 @@ subBtn.addEventListener('click', function () {
 });
 
 asyncBtn.addEventListener('click', function () {
-
+    store.dispatch(async_inc());
 });
 
 themeBtn.addEventListener('click', function () {
