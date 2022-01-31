@@ -9,11 +9,11 @@ const themeBtn = document.getElementById("theme");
 const store = createStore(rootReducer, 0);
 
 addBtn.addEventListener('click', function () {
-
+    store.dispatch({type: "INCREMENT"});
 });
 
 subBtn.addEventListener('click', function () {
-
+    store.dispatch({type: "DECREMENT"});
 });
 
 asyncBtn.addEventListener('click', function () {

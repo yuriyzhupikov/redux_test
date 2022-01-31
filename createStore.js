@@ -3,7 +3,7 @@ export function createStore(rootReducer, initialState) {
     const subscribers = [];
     return {
         dispatch(action) {
-           state = rootReducer(state, action)
+            state = rootReducer(state, action)
             subscribers.forEach(subscriber => subscriber());
         },
         subscribe(cb) {
