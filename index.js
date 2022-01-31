@@ -1,5 +1,5 @@
-import {createStore} from "./createStore";
-import {rootReducer} from "./redux/rootReducer";
+import {createStore} from "./createStore.js";
+import {rootReducer} from "./redux/rootReducer.js";
 
 const addBtn = document.getElementById("add");
 const subBtn = document.getElementById("sub");
@@ -23,3 +23,9 @@ asyncBtn.addEventListener('click', function () {
 themeBtn.addEventListener('click', function () {
 
 });
+
+store.subscribe(function (){
+    document.getElementById("counter").textContent = store.getStat();
+});
+
+store.dispatch({type: "INIT_APP"});
