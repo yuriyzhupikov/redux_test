@@ -1,4 +1,5 @@
 import {createStore} from "./createStore.js";
+// import {createStore} from "redux";
 import {rootReducer} from "./redux/rootReducer.js";
 
 const addBtn = document.getElementById("add");
