@@ -1,4 +1,5 @@
 export function createStore() {
+    const state = {};
     return {
         dispatch() {
 
@@ -7,7 +8,7 @@ export function createStore() {
 
         },
         getStat() {
-
+            return state;
         }
     }
 }
